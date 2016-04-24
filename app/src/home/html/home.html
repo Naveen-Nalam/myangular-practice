@@ -1,0 +1,29 @@
+<HEAD>
+	<HEAD>
+		<TITLE>Home page title</TITLE>
+	</HEAD>
+	<body ng-app>
+	<top-navigation></top-navigation>
+			<H1>BANK ACCOUNTS</H1>
+			<table border="1">
+				<thead>
+					<tr >
+						<td>Bank Account Name</td>
+						<td>Account Number</td>
+						<td>Balance</td>
+						<td>Recent Transaction Date</td>
+						<td>Status</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat='account in bankAccounts'>	
+						<td ng-bind="account.accountName"></td>
+						<td ng-bind="account.accountNumber"></td>
+						<td ng-bind="account.balance"></td>
+						<td> {{ account.accountOpenDate | date: 'yyyy-MM-dd' }}</td>
+						<td>VIEW</td>
+					</tr>
+				</tbody>
+			</table>
+	</body>
+</HEAD>
