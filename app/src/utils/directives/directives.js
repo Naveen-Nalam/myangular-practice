@@ -1,1 +1,1 @@
-angular.module('directives',['navigation']);
+angular.module('directives',['navigation','filters']);
